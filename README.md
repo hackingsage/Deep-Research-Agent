@@ -47,6 +47,7 @@ The goal is to simulate how a senior engineer researches unfamiliar technical to
 
 ## Architecture
 
+```
 User Query
 ↓
 Mode Router
@@ -60,7 +61,7 @@ Self-Reflection
 Memory Update
 ↓
 Structured Response
-
+```
 
 ### Components
 
@@ -172,7 +173,6 @@ The intention is to demonstrate how LLM agents can be organized as maintainable 
 
 * Embeddings run locally on CPU; no GPU required.
 * Memory persists between restarts via Qdrant storage.
-* The system includes automatic fallback handling when API limits are reached.
 
 ---
 
