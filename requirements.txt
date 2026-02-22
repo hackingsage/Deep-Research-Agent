@@ -1,0 +1,11 @@
+fastapi
+uvicorn
+langgraph
+openai
+qdrant-client
+tiktoken
+httpx
+pydantic
+python-dotenv
+google-genai
+sentence_transformers
