@@ -2,10 +2,9 @@
 
 > A production-ready AI system for structured technical research and analysis.
 
-![Repo Size](https://img.shields.io/github/repo-size/username/repo)
-![License](https://img.shields.io/github/license/username/repo)
-![Stars](https://img.shields.io/github/stars/username/repo?style=social)
-![Last Commit](https://img.shields.io/github/last-commit/username/repo)
+![Repo Size](https://img.shields.io/github/repo-size/hackingsage/Deep-Research-Agent)
+![License](https://img.shields.io/github/license/hackingsage/Deep-Research-Agent)
+![Last Commit](https://img.shields.io/github/last-commit/hackingsage/Deep-Research-Agent)
 
 ---
 
