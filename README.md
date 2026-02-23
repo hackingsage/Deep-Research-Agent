@@ -1,15 +1,23 @@
 # Deep Research Agent
 
-A technical research assistant designed for engineering workflows.  
-The system explores technical topics, retains research context across sessions, and produces structured reports focused on implementation tradeoffs rather than summaries.
+> A production-ready AI system for structured technical research and analysis.
 
-This project was built for a hackathon challenge focused on production-ready AI agents.
+![Repo Size](https://img.shields.io/github/repo-size/username/repo)
+![License](https://img.shields.io/github/license/username/repo)
+![Stars](https://img.shields.io/github/stars/username/repo?style=social)
+![Last Commit](https://img.shields.io/github/last-commit/username/repo)
+
+---
+
+> **Project Goal:** Simulate how senior engineers research unfamiliar technical topics using memory, iteration, and structured reasoning.
 
 ---
 
 ## Overview
 
-The agent answers technical questions using a multi-step workflow:
+This project implements an intelligent research agent that answers technical questions using a multi-step workflow.
+
+The system focuses on:
 
 1. Classifies the query into quick or deep research mode
 2. Retrieves relevant past context from persistent memory
@@ -50,47 +58,49 @@ The goal is to simulate how a senior engineer researches unfamiliar technical to
 ![Flowchart](docs/AI_agent_flowchart.png) 
 
 
-### Components
+### System Components
 
 | Component | Purpose |
-|---|---|
-| FastAPI | API interface |
-| LangGraph | Agent workflow orchestration |
-| Qdrant | Persistent vector memory |
-| Gemini API | Primary reasoning model |
-| Groq (fallback) | Reliability fallback model |
-| SentenceTransformers | Local embedding generation |
+|-----------|----------|
+| FastAPI | API Interface |
+| LangGraph | Workflow Orchestration |
+| Qdrant | Persistent Vector Memory |
+| Gemini API | Primary Reasoning Model |
+| Groq | Fallback Model |
+| SentenceTransformers | Local Embedding Generation |
 
 ---
+
 
 ## Research Modes
 
 ### Quick Mode
 Designed for short technical explanations.
 
-Target latency: **< 30 seconds**
+**Target Latency:** < 30 seconds
 
 ### Deep Mode
 Performs broader reasoning with comparisons and production considerations.
 
-Target latency: **< 3 minutes**
+**Target Latency:** < 3 minutes
 
 ---
 
 ## Memory Design
 
-The system stores:
+The system stores and retrieves:
 
-- user interaction preferences
-- previously explored topics
-- summarized research outputs
+- User interaction preferences
+- Previously explored topics
+- Summarized research outputs
 
-Memory retrieval is semantic rather than keyword-based, allowing follow-up queries such as:
+Memory retrieval is semantic rather than keyword-based.
+
+This enables natural follow-up queries such as:
 
 > "Go deeper on the earlier report"
 
 ---
-
 ## Running Locally
 
 ### 1. Install dependencies
@@ -152,7 +162,7 @@ This project prioritizes:
 * persistent learning behavior
 * clear system structure
 
-The intention is to demonstrate how LLM agents can be organized as maintainable engineering systems rather than single prompts.
+The intention is to show how AI agents can be organized as long-term engineering systems rather than simple prompt pipelines.
 
 ---
 
@@ -160,6 +170,7 @@ The intention is to demonstrate how LLM agents can be organized as maintainable 
 
 * Embeddings run locally on CPU; no GPU required.
 * Memory persists between restarts via Qdrant storage.
+* API keys should be kept private and never committed to the repository.
 
 ---
 
