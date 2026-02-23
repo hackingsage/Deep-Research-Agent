@@ -1,4 +1,4 @@
-# Deep Research Agent
+# ![Deep Research Agent](https://img.shields.io/badge/Deep_Research_Agent-1f77b4?style=for-the-badge)
 
 > A production-ready AI system for structured technical research and analysis.
 
@@ -13,7 +13,7 @@
 
 ---
 
-## Overview
+## ![Overview](https://img.shields.io/badge/Overview-1f77b4?style=for-the-badge)
 
 This project implements an intelligent research agent that answers technical questions using a multi-step workflow.
 
@@ -29,7 +29,7 @@ The goal is to simulate how a senior engineer researches unfamiliar technical to
 
 ---
 
-## Key Features
+## ![Key Features](https://img.shields.io/badge/Key_Features-2ca02c?style=for-the-badge)
 
 - **Dual research modes**
   - Quick mode for focused explanations
@@ -53,7 +53,7 @@ The goal is to simulate how a senior engineer researches unfamiliar technical to
 
 ---
 
-## Architecture
+## ![Architecture](https://img.shields.io/badge/Architecture-2ca02c?style=for-the-badge)
 
 ![Flowchart](docs/AI_agent_flowchart.png) 
 
@@ -72,7 +72,7 @@ The goal is to simulate how a senior engineer researches unfamiliar technical to
 ---
 
 
-## Research Modes
+## ![Research Modes](https://img.shields.io/badge/Research_Modes-d62728?style=for-the-badge)
 
 ### Quick Mode
 Designed for short technical explanations.
@@ -86,7 +86,7 @@ Performs broader reasoning with comparisons and production considerations.
 
 ---
 
-## Memory Design
+## ![Memory Design](https://img.shields.io/badge/Memory_Design-17a2b8?style=for-the-badge)
 
 The system stores and retrieves:
 
@@ -101,7 +101,7 @@ This enables natural follow-up queries such as:
 > "Go deeper on the earlier report"
 
 ---
-## Running Locally
+## ![Running Locally](https://img.shields.io/badge/Running_Locally-ff7f0e?style=for-the-badge)
 
 ### 1. Install dependencies
 
@@ -143,7 +143,7 @@ http://127.0.0.1:8000/docs
 
 ---
 
-## Example Query
+## ![Example Query](https://img.shields.io/badge/Example_Query-6f42c1?style=for-the-badge)
 
 ```
 Compare LoRA vs fine tuning tradeoffs for production systems
@@ -153,7 +153,7 @@ The agent returns a structured engineering report including tradeoffs and recomm
 
 ---
 
-## Design Goals
+## ![Design Goals](https://img.shields.io/badge/Design_Goals-d62728?style=for-the-badge)
 
 This project prioritizes:
 
@@ -166,7 +166,7 @@ The intention is to show how AI agents can be organized as long-term engineering
 
 ---
 
-## Notes
+## ![Notes](https://img.shields.io/badge/Notes-6c757d?style=for-the-badge)
 
 * Embeddings run locally on CPU; no GPU required.
 * Memory persists between restarts via Qdrant storage.
@@ -174,6 +174,6 @@ The intention is to show how AI agents can be organized as long-term engineering
 
 ---
 
-## License
+## ![License](https://img.shields.io/badge/License-28a745?style=for-the-badge)
 
 MIT License
