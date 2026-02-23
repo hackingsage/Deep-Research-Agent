@@ -1,15 +1,22 @@
-# Deep Research Agent
+# ![Deep Research Agent](https://img.shields.io/badge/Deep_Research_Agent-1f77b4?style=for-the-badge)
 
-A technical research assistant designed for engineering workflows.  
-The system explores technical topics, retains research context across sessions, and produces structured reports focused on implementation tradeoffs rather than summaries.
+> A production-ready AI system for structured technical research and analysis.
 
-This project was built for a hackathon challenge focused on production-ready AI agents.
+![Repo Size](https://img.shields.io/github/repo-size/hackingsage/Deep-Research-Agent)
+![License](https://img.shields.io/github/license/hackingsage/Deep-Research-Agent)
+![Last Commit](https://img.shields.io/github/last-commit/hackingsage/Deep-Research-Agent)
 
 ---
 
-## Overview
+> **Project Goal:** Simulate how senior engineers research unfamiliar technical topics using memory, iteration, and structured reasoning.
 
-The agent answers technical questions using a multi-step workflow:
+---
+
+## ![Overview](https://img.shields.io/badge/Overview-1f77b4?style=for-the-badge)
+
+This project implements an intelligent research agent that answers technical questions using a multi-step workflow.
+
+The system focuses on:
 
 1. Classifies the query into quick or deep research mode
 2. Retrieves relevant past context from persistent memory
@@ -21,7 +28,7 @@ The goal is to simulate how a senior engineer researches unfamiliar technical to
 
 ---
 
-## Key Features
+## ![Key Features](https://img.shields.io/badge/Key_Features-2ca02c?style=for-the-badge)
 
 - **Dual research modes**
   - Quick mode for focused explanations
@@ -45,53 +52,55 @@ The goal is to simulate how a senior engineer researches unfamiliar technical to
 
 ---
 
-## Architecture
+## ![Architecture](https://img.shields.io/badge/Architecture-2ca02c?style=for-the-badge)
 
 ![Flowchart](docs/AI_agent_flowchart.png) 
 
 
-### Components
+### System Components
 
 | Component | Purpose |
-|---|---|
-| FastAPI | API interface |
-| LangGraph | Agent workflow orchestration |
-| Qdrant | Persistent vector memory |
-| Gemini API | Primary reasoning model |
-| Groq (fallback) | Reliability fallback model |
-| SentenceTransformers | Local embedding generation |
+|-----------|----------|
+| FastAPI | API Interface |
+| LangGraph | Workflow Orchestration |
+| Qdrant | Persistent Vector Memory |
+| Gemini API | Primary Reasoning Model |
+| Groq | Fallback Model |
+| SentenceTransformers | Local Embedding Generation |
 
 ---
 
-## Research Modes
+
+## ![Research Modes](https://img.shields.io/badge/Research_Modes-d62728?style=for-the-badge)
 
 ### Quick Mode
 Designed for short technical explanations.
 
-Target latency: **< 30 seconds**
+**Target Latency:** < 30 seconds
 
 ### Deep Mode
 Performs broader reasoning with comparisons and production considerations.
 
-Target latency: **< 3 minutes**
+**Target Latency:** < 3 minutes
 
 ---
 
-## Memory Design
+## ![Memory Design](https://img.shields.io/badge/Memory_Design-17a2b8?style=for-the-badge)
 
-The system stores:
+The system stores and retrieves:
 
-- user interaction preferences
-- previously explored topics
-- summarized research outputs
+- User interaction preferences
+- Previously explored topics
+- Summarized research outputs
 
-Memory retrieval is semantic rather than keyword-based, allowing follow-up queries such as:
+Memory retrieval is semantic rather than keyword-based.
+
+This enables natural follow-up queries such as:
 
 > "Go deeper on the earlier report"
 
 ---
-
-## Running Locally
+## ![Running Locally](https://img.shields.io/badge/Running_Locally-ff7f0e?style=for-the-badge)
 
 ### 1. Install dependencies
 
@@ -133,7 +142,7 @@ http://127.0.0.1:8000/docs
 
 ---
 
-## Example Query
+## ![Example Query](https://img.shields.io/badge/Example_Query-6f42c1?style=for-the-badge)
 
 ```
 Compare LoRA vs fine tuning tradeoffs for production systems
@@ -143,7 +152,7 @@ The agent returns a structured engineering report including tradeoffs and recomm
 
 ---
 
-## Design Goals
+## ![Design Goals](https://img.shields.io/badge/Design_Goals-d62728?style=for-the-badge)
 
 This project prioritizes:
 
@@ -152,17 +161,18 @@ This project prioritizes:
 * persistent learning behavior
 * clear system structure
 
-The intention is to demonstrate how LLM agents can be organized as maintainable engineering systems rather than single prompts.
+The intention is to show how AI agents can be organized as long-term engineering systems rather than simple prompt pipelines.
 
 ---
 
-## Notes
+## ![Notes](https://img.shields.io/badge/Notes-6c757d?style=for-the-badge)
 
 * Embeddings run locally on CPU; no GPU required.
 * Memory persists between restarts via Qdrant storage.
+* API keys should be kept private and never committed to the repository.
 
 ---
 
-## License
+## ![License](https://img.shields.io/badge/License-28a745?style=for-the-badge)
 
 MIT License
