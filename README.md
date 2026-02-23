@@ -56,6 +56,9 @@ The goal is to simulate how a senior engineer researches unfamiliar technical to
 
 ![Flowchart](docs/AI_agent_flowchart.png) 
 
+##![Demo](https://img.shields.io/badge/Demo-20c997?style=for-the-badge)
+
+[![Watch Demo](assets/thumbnails/demo.png)](docs/demo.mp4)
 
 ### System Components
 
