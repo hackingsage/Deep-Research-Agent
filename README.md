@@ -47,21 +47,8 @@ The goal is to simulate how a senior engineer researches unfamiliar technical to
 
 ## Architecture
 
-```
-User Query
-↓
-Mode Router
-↓
-Memory Retrieval (Qdrant)
-↓
-LLM Reasoning
-↓
-Self-Reflection
-↓
-Memory Update
-↓
-Structured Response
-```
+![Flowchart](docs/AI_agent_flowchart.png) 
+
 
 ### Components
 
