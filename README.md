@@ -69,7 +69,11 @@ The goal is to simulate how a senior engineer researches unfamiliar technical to
 | SentenceTransformers | Local Embedding Generation |
 
 ---
+##![Demo](https://img.shields.io/badge/Demo-20c997?style=for-the-badge)
 
+<p align="center">
+  <img src="docs/demo.mp4">
+</p>
 
 ## ![Research Modes](https://img.shields.io/badge/Research_Modes-d62728?style=for-the-badge)
 
