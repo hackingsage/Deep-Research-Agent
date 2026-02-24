@@ -172,7 +172,6 @@ The intention is to show how AI agents can be organized as long-term engineering
 
 * Embeddings run locally on CPU; no GPU required.
 * Memory persists between restarts via Qdrant storage.
-* API keys should be kept private and never committed to the repository.
 
 ---
 
