@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <title>Deep Research Agent</title>
+  <link rel="stylesheet" href="/style.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.9.0/styles/github-dark.min.css">
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.9.0/highlight.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/marked/marked.min.js"></script>
+</head>
+
+<body>
+
+<div class="container">
+
+  <h1>🧠 Deep Research Agent</h1>
+
+  <div class="input-box">
+    <input id="query" placeholder="Ask a technical question..." />
+    <button onclick="runQuery()">Run</button>
+  </div>
+
+  <div id="meta" class="meta"></div>
+
+  <div id="memory" class="memory"></div>
+
+  <div id="answer" class="answer"></div>
+
+</div>
+
+<script>
+
+// marked.setOptions({
+//   breaks: true
+// });
+
+async function runQuery() {
+
+  const query = document.getElementById("query").value;
+
+  const meta = document.getElementById("meta");
+  const answer = document.getElementById("answer");
+  const memory = document.getElementById("memory");
+
+  meta.innerText = "Running...";
+  answer.innerHTML = "";
+  memory.innerHTML = "";
+
+  try {
+
+    const response = await fetch("/research", {
+      method: "POST",
+      headers: {
+        "Content-Type": "application/json"
+      },
+      body: JSON.stringify({
+        query: query,
+        user_id: "ui_user"
+      })
+    });
+
+    // ✅ FIRST get JSON
+    const data = await response.json();
+
+    // metadata
+    meta.innerText =
+      `Mode: ${data.mode.toUpperCase()} | Latency: ${data.latency_seconds}s`;
+
+    // memory display
+    if (data.memory_used && data.memory_used.length > 0) {
+      memory.innerHTML =
+        "<b>Memory Used:</b><br>" +
+        data.memory_used.map(m => "• " + m).join("<br>");
+    }
+
+    // markdown render
+    answer.innerHTML = marked.parse(data.answer);
+
+    // optional syntax highlighting
+    if (window.hljs) {
+      hljs.highlightAll();
+    }
+
+  } catch (err) {
+    console.error(err);
+    meta.innerText = "Error running query.";
+  }
+}
+
+</script>
+
+</body>
+</html>

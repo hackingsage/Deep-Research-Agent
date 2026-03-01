@@ -1,0 +1,103 @@
+body {
+  font-family: Arial, sans-serif;
+  background: #f4f6f8;
+  margin: 0;
+}
+
+.container {
+  max-width: 900px;
+  margin: auto;
+  padding: 40px;
+}
+
+h1 {
+  text-align: center;
+  color: #222;
+}
+
+.input-box {
+  display: flex;
+  gap: 10px;
+  margin-bottom: 20px;
+}
+
+input {
+  flex: 1;
+  padding: 12px;
+  font-size: 16px;
+}
+
+button {
+  padding: 12px 18px;
+  background: #2563eb;
+  color: white;
+  border: none;
+  cursor: pointer;
+}
+
+button:hover {
+  background: #1d4ed8;
+}
+
+.meta {
+  margin: 10px 0;
+  font-weight: bold;
+  color: #333;
+}
+
+.memory {
+  margin-bottom: 15px;
+  color: #555;
+}
+
+.answer {
+  background: white;
+  padding: 20px;
+  border-radius: 8px;
+  white-space: pre-wrap;
+  line-height: 1.5;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.08);
+}
+
+.answer h2 {
+  margin-top: 20px;
+  color: #111827;
+}
+
+.answer h3 {
+  margin-top: 16px;
+  color: #1f2937;
+}
+
+.answer ul {
+  padding-left: 20px;
+}
+
+.answer li {
+  margin: 6px 0;
+}
+
+/* CODE BLOCKS */
+.answer pre {
+  background: #0f172a;        /* dark navy */
+  color: #e5e7eb;             /* readable light text */
+  padding: 16px;
+  border-radius: 8px;
+  overflow-x: auto;
+  font-family: Consolas, Monaco, monospace;
+  font-size: 14px;
+  line-height: 1.5;
+}
+
+.answer code {
+  color: #e5e7eb;
+  background: transparent;
+}
+
+/* inline code */
+.answer p code {
+  background: #f3f4f6;
+  color: #111827;
+  padding: 2px 6px;
+  border-radius: 4px;
+}
