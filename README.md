@@ -67,8 +67,7 @@ The goal is to simulate how a senior engineer researches unfamiliar technical to
 | FastAPI | API Interface |
 | LangGraph | Workflow Orchestration |
 | Qdrant | Persistent Vector Memory |
-| Gemini API | Primary Reasoning Model |
-| Groq | Fallback Model |
+| Groq | Primary Model |
 | SentenceTransformers | Local Embedding Generation |
 
 ---
