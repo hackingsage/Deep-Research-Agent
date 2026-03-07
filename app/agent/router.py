@@ -5,7 +5,8 @@ def route_mode(query: str) -> str:
         "deep dive",
         "research",
         "benchmark",
-        "detail"
+        "detail",
+        "design"
     ]
 
     if any(k in query.lower() for k in deep_keywords):
